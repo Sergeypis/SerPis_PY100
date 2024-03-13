@@ -1,0 +1,51 @@
+type: output
+files:
+  - name: main.py
+    visible: true
+    placeholders:
+      - offset: 0
+        length: 124
+        placeholder_text: |-
+          # TODO Найдите количество книг, которое можно разместить на дискете
+          
+          print("Количество книг, помещающихся на дискету:", ...)
+        initial_state:
+          length: 124
+          offset: 0
+        initialized_from_dependency: false
+        selected: false
+        status: Unchecked
+        encrypted_possible_answer: |-
+          BYTES_ONE_CHAR = 4  # размер одного символа в байтах
+          
+          # никаких магических чисел
+          pages = 100
+          lines = 50
+          chars = 25
+          
+          total_chars = pages * lines * chars
+          total_bytes = total_chars * BYTES_ONE_CHAR
+          
+          disk_size = 1.44 * 1024 * 1024  # размер в байтах
+          num_books = int(disk_size // total_bytes)
+          
+          print("Количество книг, помещающихся на дискету:", num_books)
+    text: |
+      # TODO Найдите количество книг, которое можно разместить на дискете
+      
+      print("Количество книг, помещающихся на дискету:", ...)
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/output.txt
+    visible: false
+    text: |
+      Количество книг, помещающихся на дискету: 3
+    learner_created: false
+  - name: bytes_table.png
+    visible: false
+    learner_created: false
+status: Unchecked
+record: -1
+solution_hidden: true
